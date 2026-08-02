@@ -3277,7 +3277,10 @@ input, select, textarea {
 				padding: 0;
 				vertical-align: middle;
 			}
-
+				#nav ul li span {
+					display: none;
+				}
+				
 				#nav ul li a {
 					-moz-transition: font-size 0.2s ease;
 					-webkit-transition: font-size 0.2s ease;
@@ -3314,6 +3317,9 @@ input, select, textarea {
 			#nav.alt ul li {
 				margin: 0 0.175em;
 			}
+				#nav.alt ul li span {
+					display: inline;
+				}
 
 				#nav.alt ul li a {
 					font-size: 0.9em;
