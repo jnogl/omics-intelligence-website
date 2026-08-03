@@ -3706,72 +3706,76 @@ input, select, textarea {
 		}
 
 /* Carousel Wrapper */
-	.carousel-container {
-	position: relative;
-	max-width: 800px; /* Adjust width as needed */
-	margin: 0 auto;
-	overflow: hidden;
-	border-radius: 8px;
+		.carousel-container {
+		position: relative;
+		max-width: 800px; /* Adjust width as needed */
+		margin: 0 auto;
+		overflow: hidden;
+		border-radius: 8px;
 	}
 
 	/* Track holding all cards side by side */
 	.carousel-track {
-	display: flex;
-	transition: transform 0.5s ease-in-out;
+		display: flex;
+		transition: transform 0.5s ease-in-out;
 	}
 
 	/* Individual Article Cards */
 	.carousel-card {
-	min-width: 100%;
-	box-sizing: border-box;
-	text-decoration: none;
-	color: inherit;
-	display: flex;
-	flex-direction: column;
-	background: #ffffff; /* Match your theme */
-	border-radius: 8px;
-	overflow: hidden;
-	outline: none !important;
-	border-bottom: none !important;
-	box-shadow: none !important;
+		min-width: 100%;
+		box-sizing: border-box;
+		padding: 1em 0em 0em 0em;
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		border-radius: 8px;
+		overflow: hidden;
+		outline: none !important;
+		border-bottom: none !important;
+		box-shadow: none !important;
+		transition: background-color 0.25s ease;
 	}
+		.carousel-card:hover {
+			background-color: #f7f7f7f7;
+		}
 
 	.card-image img {
-	width: 100%;
-	height: 250px;
-	object-fit: cover;
-	display: block;
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		display: block;
 	}
 
 	.card-content {
-	padding: 1.5rem;
-	text-align: left;
+		padding: 1.5rem;
+		text-align: left;
 	}
 
 	/* Pagination Dots */
 	.carousel-dots {
-	display: flex;
-	justify-content: center;
-	gap: 8px;
-	margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		margin-top: 15px;
 	}
 
 	.dot {
-	width: 14px;
-	height: 14px;
-	background-color: #ccc;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+		width: 14px;
+		height: 14px;
+		background-color: #ccc;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
 	}
 
 	.dot.active {
-	background-color: #333; /* Change to your template's primary color */
+		background-color: #333; /* Change to your template's primary color */
 	}
 
 	.carousel-action {
-	text-align: center;
-	margin-top: 2rem;
+		text-align: center;
+		margin-top: 2rem;
 	}
 
 /* Footer */
