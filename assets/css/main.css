@@ -2256,7 +2256,7 @@ input, select, textarea {
 		}
 
 		.icon.major {
-			border: solid 1px;
+			border: solid 0px; /* Removes border around icons */
 			display: inline-block;
 			border-radius: 100%;
 			padding: 0.65em;
@@ -2271,7 +2271,7 @@ input, select, textarea {
 				height: 2.25em;
 				line-height: 2.2em;
 				border-radius: 100%;
-				border: solid 1px;
+				border: solid 0px; /* Removes border around icons */
 				text-align: center;
 			}
 
@@ -2859,6 +2859,26 @@ input, select, textarea {
 
 		}
 
+			.features li .feature-card {
+				display: block;
+				padding: 0.25em 0.25em;
+				border-radius: 10px;
+				text-decoration: none;
+				color: inherit;
+				cursor: pointer;
+				border-bottom: none;
+				transition: transform 0.1s ease, background-color 0.1s ease;
+			}
+
+				.features li .feature-card:hover {
+					transform: translateY(-1px);
+					background-color:#f7f7f7;
+				}
+
+				.features li .feature-card h3 {
+					color: inherit;
+				}
+
 /* Statistics */
 
 	.statistics {
@@ -3002,7 +3022,7 @@ input, select, textarea {
 			margin-left: 4em;
 			padding: 0.65em;
 			border-radius: 100%;
-			border: solid 1px;
+			border: solid 0px;
 		}
 
 			.spotlight .image img {
@@ -3858,3 +3878,11 @@ input, select, textarea {
 			}
 
 		}
+
+/* .icon.major, #main .icon.major {
+	border: none;
+}
+
+.icon.major:before, #main .icon.major:before {
+	border: none;
+} */
