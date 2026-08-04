@@ -1,4 +1,4 @@
-const form = document.querySelector('form[name="contact"]');
+const form = document.querySelector('form[name="subscription"]');
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Stops the browser from leaving the page
 
@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
             form.innerHTML = `
                 <div style="text-align: center; padding: 2em;">
                     <h3>Message Sent!</h3>
-                    <p>Thank you for reaching out. I'll get back to you shortly.</p>
+                    <p>Thank you for subscribing to the Omics Intelligence newsletter! You can unsubscribe at any moment.</p>
                     <ul>
                         <li>
                             <a href="/" class="button">Back Home</a>
