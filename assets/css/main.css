@@ -5,6 +5,7 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Modified by Jonas Noguera
 */
 
 html, body, div, span, applet, object,
@@ -3105,8 +3106,20 @@ input, select, textarea {
 			letter-spacing: -0.025em;
 		}
 
+		#header .logo a {
+			border-bottom: none;
+		}
+
 		#header.alt {
 			padding: 7em 5em 4em 5em ;
+			min-height: 100dvh; /* Ensures the header of main page occupies the full screen height */
+			/* 
+			Centers content of header at the middle of the screen 
+			*/
+			display: flex;
+			flex-direction: column;
+			justify-content:space-between;
+			align-items:center;
 		}
 
 			#header.alt h1 {
@@ -3143,6 +3156,11 @@ input, select, textarea {
 					margin: 0 auto;
 					max-width: 75%;
 				}
+
+			#header.alt .arrow {
+				text-decoration: none;
+				border-bottom: none;
+			}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3215,6 +3233,17 @@ input, select, textarea {
 					padding: 3.5em 1em 0.5em 1em ;
 				}
 
+		}
+
+		body.is-preload #header > * {
+			opacity: 0;
+		}
+
+		body.is-preload #header .logo {
+			-moz-transform: scale(0.8) rotate(-30deg);
+			-webkit-transform: scale(0.8) rotate(-30deg);
+			-ms-transform: scale(0.8) rotate(-30deg);
+			transform: scale(0.8) rotate(-30deg);
 		}
 
 		body.is-preload #header.alt > * {
