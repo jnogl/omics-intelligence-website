@@ -3106,13 +3106,18 @@ input, select, textarea {
 				margin-left: 0;
 				width: 16em;
 				height: 21em;
-				border-radius: 1em;
+				border-radius: 0.5em;
 				overflow: hidden;
 			}
 
-				.spotlight .image img {
+				.spotlight .image .parallax-intro {
 					width: 16em;
-					border-radius: 1em;
+					border-radius: 0.5em;
+				}
+
+				.spotlight .image .parallax-cta {
+					width: 26em;
+					border-radius: 0.5em;
 				}
 
 		}
@@ -3428,6 +3433,7 @@ input, select, textarea {
 
 	#main.is-dark {
 		background-color: #302744;
+		color: #939393;
 		transition: background-color 1s ease-in-out;
 	}
 
@@ -3445,6 +3451,10 @@ input, select, textarea {
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
+		}
+
+		#main.is-dark h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+			color: #939393;
 		}
 
 		#main blockquote {
@@ -3472,6 +3482,12 @@ input, select, textarea {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #636363 !important;
+		}
+
+		#main.is-dark .button {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 1px #dddddd;
+			color: #939393 !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3803,7 +3819,7 @@ input, select, textarea {
 		transition: background-color 0.25s ease;
 	}
 		.carousel-card:hover {
-			background-color: #f7f7f7f7;
+			background-color: #f1f1f1;
 		}
 
 	.card-image img {
