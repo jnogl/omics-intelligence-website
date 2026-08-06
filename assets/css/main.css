@@ -2884,6 +2884,11 @@ input, select, textarea {
 					background-color:#f1f1f1;
 				}
 
+				.features li .feature-card.is-dark:hover {
+					background-color: #3d3456;
+					transition: transform 0.3s ease-in-out, background-color 1s ease-in-out;
+				}
+
 				.features li .feature-card h3 {
 					color: inherit;
 				}
@@ -3409,6 +3414,12 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		transition: background-color 1s ease-in-out;
+	}
+
+	#main.is-dark {
+		background-color: #302744;
+		transition: background-color 1s ease-in-out;
 	}
 
 		#main input, #main select, #main textarea {

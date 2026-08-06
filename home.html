@@ -215,6 +215,7 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/carousel.js"></script>
 			<script src="/assets/js/parallax.control.js"></script>
+			<script src="/assets/js/darkmode.control.js"
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
 			<script src="/assets/js/footer.js"></script>
@@ -228,7 +229,17 @@
 						disableTranslationWidth: 736
 					});
 
+					// Controls interactive dark mode
+					new DarkModeToggle({
+						trigger: '#first',
+						targets: '#main, .features li .feature-card',
+						thresholdUp: 0.10,
+						thresholdDown: -0.75
+					});
+
 				});
+
+
 			</script>
 
 	</body>
