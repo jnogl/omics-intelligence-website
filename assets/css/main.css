@@ -3036,14 +3036,23 @@ input, select, textarea {
 			margin-left: 4em;
 			width: 24em;
 			height: 32em;
-			border-radius: 1.5em;
+			border-radius: 0.5em;
 			overflow: hidden;
 		}
 
-			.spotlight .image img {
+			.spotlight .image .parallax-intro {
 				display: block;
 				width: 24em;
-				border-radius: 1.5em;
+				border-radius: 0.5em;
+				will-change: transform;
+  				transition: transform 0.05s linear;
+			}
+
+			.spotlight .image .parallax-cta {
+				display: block;
+				width: 40em;
+				border-radius: 0.5em;
+				justify-content: center;
 				will-change: transform;
   				transition: transform 0.05s linear;
 			}

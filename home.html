@@ -70,7 +70,7 @@
 										</ul>
 									</div>
 									<span class="image">
-										<img class="parallax" src="/images/portrait.jpg"></img>
+										<img class="parallax-intro" src="/images/portrait.jpg"></img>
 									</span>
 								</div>
 							</section>
@@ -111,7 +111,7 @@
 							</section>
 					</div>
 
-					<div class="blank"></div>
+					<div class="blank spicy"></div>
 
 					<div id="main">
 
@@ -186,17 +186,24 @@
 
 						<!-- Get Started -->
 							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Get started</h2>
-									<p>Ready to Accelerate Your Research?<br />
-									Let's discuss your project and discover<br />
-									how to make the next breakthrough.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="/contact.html" class="button primary">Get Started</a></li>
-									</ul>
-								</footer>
+								<div class="spotlight">
+									<span class="image">
+										<img class="parallax-cta" src="/images/get_started.jpg" alt="">
+									</span>
+									<div class="content">
+										<header class="major">
+											<h2>Get started</h2>
+											<p>Ready to Accelerate Your Research?<br />
+											Let's discuss your project and discover<br />
+											how to make the next breakthrough.</p>
+										</header>
+										<footer class="major">
+											<ul class="actions special">
+												<li><a href="/contact.html" class="button primary">Get Started</a></li>
+											</ul>
+										</footer>
+									</div>
+								</div>
 							</section>
 
 					</div>
@@ -215,7 +222,7 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/carousel.js"></script>
 			<script src="/assets/js/parallax.control.js"></script>
-			<script src="/assets/js/darkmode.control.js"
+			<script src="/assets/js/darkmode.control.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
 			<script src="/assets/js/footer.js"></script>
@@ -223,20 +230,25 @@
 			<script>
 				document.addEventListener('DOMContentLoaded', () => {
 
-					new ParallaxController('.spotlight .image .parallax', {
+					// Controls parallax effects
+					new ParallaxController('.spotlight .image .parallax-intro', {
 						zoomAmount: 0.35,
 						translateRange: 10,
 						disableTranslationWidth: 736
 					});
+					new ParallaxController('.spotlight .image .parallax-cta', {
+						zoomAmount: 1.25,
+						translateRange: 10,
+						disableTranslationWidth: 736
+					});
 
-					// Controls interactive dark mode
+					// Controls interactive dark mode effects
 					new DarkModeToggle({
 						trigger: '#first',
 						targets: '#main, .features li .feature-card',
 						thresholdUp: 0.10,
 						thresholdDown: -0.75
 					});
-
 				});
 
 
