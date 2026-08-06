@@ -3697,13 +3697,32 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-			#main > .main > .image.main:first-child {
+			#main.contact-page > .main > .image.main:first-child {
 				margin: -5em 0 5em -5em;
 				width: calc(100% + 10em);
+				height: 8em;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
+				background-image: url(/images/pen.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				overflow: hidden;
+			}
+
+			#main.subscription-page > .main > .image.main:first-child {
+				margin: -5em 0 5em -5em;
+				width: calc(100% + 10em);
+				height: 8em;
+				border-top-right-radius: 0.25em;
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-image: url(/images/library.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				overflow: hidden;
 			}
 
 				#main > .main > .image.main:first-child img {
