@@ -4035,3 +4035,46 @@ input, select, textarea {
 .icon.major:before, #main .icon.major:before {
 	border: none;
 } */
+
+/* Curtains */
+
+.page-curtain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	pointer-events: none;
+	display: flex;
+}
+
+.curtain-panel {
+	width: 50vw;
+	height: 100vh;
+	background-color: #1B1726;
+	transition: transform 1s cubic-bezier(0.5, 0.0, 0.0, 1.0);
+	will-change: transform;
+}
+
+/* Initial state: Curtains CLOSED (covering the screen) */
+.curtain-left {
+  	transform: translateX(0);
+}
+.curtain-right {
+ 	transform: translateX(0);
+}
+
+/* Open state: Panels slide out off-screen */
+body.page-loaded .curtain-left {
+  	transform: translateX(-100%);
+}
+body.page-loaded .curtain-right {
+  	transform: translateX(100%);
+}
+
+/* Closing state: Panels slide back together */
+body.page-exiting .curtain-left,
+body.page-exiting .curtain-right {
+  	transform: translateX(0) !important;
+}
