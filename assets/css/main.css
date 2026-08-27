@@ -3728,7 +3728,7 @@ input, select, textarea {
 			#main.about-page > .main > .image.main:first-child {
 				margin: -5em 0 5em -5em;
 				width: calc(100% + 10em);
-				height: 8em;
+				height: 24em;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
