@@ -541,6 +541,34 @@ input, select, textarea {
 					padding-top: 1.5em;
 				}
 
+				/* Blog Article Card modifications */
+				.row.gtr-uniform > .blog-article-card {
+					margin: 0em;
+					padding: 1.5em;
+					border-radius: 7px;
+					transition: scale ease-in-out 0.2s;
+				}
+
+				.row.gtr-uniform > .blog-article-card span {
+					margin: 0.25em;
+				}
+
+				.row.gtr-uniform > .blog-article-card p {
+					margin: 0em;
+					padding: 0em;
+				}
+
+				.row.gtr-uniform > .blog-article-card .blog-article-card-date {
+					color: rgb(174, 174, 174);
+				}
+				
+				.row.gtr-uniform > .blog-article-card:hover {
+					background-color: #f1f1f1;
+					scale: 105%;
+					transition: scale ease-in-out 0.2s;
+					cursor: pointer;
+				}
+
 		.row.gtr-150 {
 			margin-top: 0;
 			margin-left: -2.25em;
