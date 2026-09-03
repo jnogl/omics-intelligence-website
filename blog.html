@@ -15,29 +15,81 @@
 	</head>
 	<body class="is-preload">
 
+		<!-- Curtains -->
+			<div class="page-curtain" aria-hidden="true">
+				<div class="curtain-panel curtain-left"></div>
+				<div class="curtain-panel curtain-right"></div>
+			</div>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<span class="logo"><a href="/"><img src="/images/logo_circle.svg" alt="logo" /></a></span>
-						<h1>The blog of Jonas</h1>
+						<span class="logo"><a href="/home.html#second"><img src="/images/logo.svg" alt="logo" /></a></span>
+						<h1>Omics Intelligence's blog</h1>
 						<p>Takes and insights</p>
 					</header>
 
 				<!-- Main -->
-					<div id="main">
+					<div id="main" class="blog-page">
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="/images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-							</section>
+								<span class="image main">
+									<!-- <img src="/images/pic04.jpg" alt="" /> -->
+								</span>
+								<div class="box alt"></div>
+									<div class="row gtr-uniform">
+										<div class="col-4 blog-article-card">
+											<a href="/blog/article000003.html">
+												<span class="image fit">
+													<img src="images/pic02.jpg" alt="" />
+												</span>
+												<div>
+													<h3>Accelerating Data Pipelines in 2026</h3>
+													<p class="blog-article-card-date">
+														3<sup>rd</sup> September 2026
+													</p>
+													<p>
+														Discover how modern architectures reduce processing time by up to 40% for complex research models
+													</p>
+												</div>
+											</a>
+										</div>
 
+										<div class="col-4 blog-article-card">
+											<a href="/blog/article000002.html">
+												<span class="image fit">
+													<img src="images/pic01.jpg" alt="" />
+												</span>
+												<div class="article-card-text">
+													<h3>Optimizing Machine Learning Workflows</h3>
+													<p class="blog-article-card-date">
+														2<sup>nd</sup> September 2026
+													</p>
+													<p>A practical guide to structuring experiment tracking and maintaining reproducible results</p>
+												</div>
+											</a>
+										</div>
+
+										<div class="col-4 blog-article-card">
+											<a href="/blog/article000001.html">
+												<span class="image fit">
+													<img src="images/pic01.jpg" alt="" />
+												</span>
+												<div>
+													<h3>The future of collaborative research</h3>
+													<p class="blog-article-card-date">
+														1<sup>st</sup> September 2026
+													</p>
+													<p>How distributed teams leverage open science standards to scale breakthrough discoveries</p>
+												</div>
+											</a>
+										</div>
+
+
+								</div>
 					</div>
 
 				<!-- Footer -->
@@ -49,11 +101,14 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/scroll.control.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="/assets/js/footer.js"></script>
+			<script src="/assets/js/curtain.control.js"></script>
+			<script src="/assets/js/blog.article.card.control.js"></script>
 
 	</body>
 </html>

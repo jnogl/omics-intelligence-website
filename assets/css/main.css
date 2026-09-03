@@ -5,6 +5,7 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Modified by Jonas Noguera
 */
 
 html, body, div, span, applet, object,
@@ -538,6 +539,34 @@ input, select, textarea {
 
 				.row.gtr-uniform > * {
 					padding-top: 1.5em;
+				}
+
+				/* Blog Article Card modifications */
+				.row.gtr-uniform > .blog-article-card {
+					margin: 0em;
+					padding: 1.5em;
+					border-radius: 7px;
+					transition: scale ease-in-out 0.2s;
+				}
+
+				.row.gtr-uniform > .blog-article-card span {
+					margin: 0.25em;
+				}
+
+				.row.gtr-uniform > .blog-article-card p {
+					margin: 0em;
+					padding: 0em;
+				}
+
+				.row.gtr-uniform > .blog-article-card .blog-article-card-date {
+					color: rgb(174, 174, 174);
+				}
+				
+				.row.gtr-uniform > .blog-article-card:hover {
+					background-color: #f1f1f1;
+					scale: 105%;
+					transition: scale ease-in-out 0.2s;
+					cursor: pointer;
 				}
 
 		.row.gtr-150 {
@@ -2705,6 +2734,13 @@ input, select, textarea {
 		background-color: rgba(255, 255, 255, 0.35);
 	}
 
+	.blank {
+		display: block;
+		width: 100%;
+		height: 15dvh;
+		background-color: transparent;
+	}
+
 /* Table */
 
 	.table-wrapper {
@@ -2867,12 +2903,18 @@ input, select, textarea {
 				color: inherit;
 				cursor: pointer;
 				border-bottom: none;
-				transition: transform 0.1s ease, background-color 0.1s ease;
+				transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 			}
 
 				.features li .feature-card:hover {
-					transform: translateY(-1px);
-					background-color:#f7f7f7;
+					transform: translateY(-5px);
+					transform: scale(105%);
+					background-color:#f1f1f1;
+				}
+
+				.features li .feature-card.is-dark:hover {
+					background-color: #3d3456;
+					transition: transform 0.3s ease-in-out, background-color 1s ease-in-out;
 				}
 
 				.features li .feature-card h3 {
@@ -3020,15 +3062,27 @@ input, select, textarea {
 		.spotlight .image {
 			display: inline-block;
 			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
-			border: solid 0px;
+			width: 24em;
+			height: 32em;
+			border-radius: 0.5em;
+			overflow: hidden;
 		}
 
-			.spotlight .image img {
+			.spotlight .image .parallax-intro {
 				display: block;
-				border-radius: 100%;
-				width: 16em;
+				width: 24em;
+				border-radius: 0.5em;
+				will-change: transform;
+  				transition: transform 0.05s linear;
+			}
+
+			.spotlight .image .parallax-cta {
+				display: block;
+				width: 40em;
+				border-radius: 0.5em;
+				justify-content: center;
+				will-change: transform;
+  				transition: transform 0.05s linear;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3076,11 +3130,22 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight .image {
-				padding: 0.35em;
+				display: inline-block;
+				margin-left: 0;
+				width: 16em;
+				height: 21em;
+				border-radius: 0.5em;
+				overflow: hidden;
 			}
 
-				.spotlight .image img {
-					width: 12em;
+				.spotlight .image .parallax-intro {
+					width: 16em;
+					border-radius: 0.5em;
+				}
+
+				.spotlight .image .parallax-cta {
+					width: 26em;
+					border-radius: 0.5em;
 				}
 
 		}
@@ -3105,8 +3170,20 @@ input, select, textarea {
 			letter-spacing: -0.025em;
 		}
 
+		#header .logo a {
+			border-bottom: none;
+		}
+
 		#header.alt {
 			padding: 7em 5em 4em 5em ;
+			min-height: 100dvh; /* Ensures the header of main page occupies the full screen height */
+			/* 
+			Centers content of header at the middle of the screen 
+			*/
+			display: flex;
+			flex-direction: column;
+			justify-content:space-between;
+			align-items:center;
 		}
 
 			#header.alt h1 {
@@ -3143,6 +3220,11 @@ input, select, textarea {
 					margin: 0 auto;
 					max-width: 75%;
 				}
+
+			#header.alt .arrow {
+				text-decoration: none;
+				border-bottom: none;
+			}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3215,6 +3297,17 @@ input, select, textarea {
 					padding: 3.5em 1em 0.5em 1em ;
 				}
 
+		}
+
+		body.is-preload #header > * {
+			opacity: 0;
+		}
+
+		body.is-preload #header .logo {
+			-moz-transform: scale(0.8) rotate(-30deg);
+			-webkit-transform: scale(0.8) rotate(-30deg);
+			-ms-transform: scale(0.8) rotate(-30deg);
+			transform: scale(0.8) rotate(-30deg);
 		}
 
 		body.is-preload #header.alt > * {
@@ -3363,6 +3456,13 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		transition: background-color 1s ease-in-out;
+	}
+
+	#main.is-dark {
+		background-color: #302744;
+		color: #939393;
+		transition: background-color 1s ease-in-out;
 	}
 
 		#main input, #main select, #main textarea {
@@ -3379,6 +3479,10 @@ input, select, textarea {
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
+		}
+
+		#main.is-dark h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+			color: #939393;
 		}
 
 		#main blockquote {
@@ -3406,6 +3510,12 @@ input, select, textarea {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 1px #dddddd;
 			color: #636363 !important;
+		}
+
+		#main.is-dark .button {
+			background-color: transparent;
+			box-shadow: inset 0 0 0 1px #dddddd;
+			color: #939393 !important;
 		}
 
 			#main input[type="submit"]:hover,
@@ -3608,20 +3718,83 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+			/* border-top: solid 1px #dddddd; // Removes border between main section */
 		}
 
 			#main > .main:first-child {
 				border-top: 0;
 			}
 
-			#main > .main > .image.main:first-child {
+			#main.contact-page > .main > .image.main:first-child {
 				margin: -5em 0 5em -5em;
 				width: calc(100% + 10em);
+				height: 8em;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
+				background-image: url(/images/pen.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				overflow: hidden;
+			}
+
+			#main.subscription-page > .main > .image.main:first-child {
+				margin: -5em 0 5em -5em;
+				width: calc(100% + 10em);
+				height: 8em;
+				border-top-right-radius: 0.25em;
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-image: url(/images/library.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				overflow: hidden;
+			}
+
+			#main.about-page > .main > .image.main:first-child {
+				margin: -5em 0 5em -5em;
+				width: calc(100% + 10em);
+				height: 24em;
+				border-top-right-radius: 0.25em;
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-image: url(/images/portrait.jpg);
+				background-size: 70%;
+				background-attachment: fixed;
+				overflow: hidden;
+			}
+
+
+			#main.services-page > .main > .image.main:first-child {
+				margin: -5em 0 5em -5em;
+				width: calc(100% + 10em);
+				height: 8em;
+				border-top-right-radius: 0.25em;
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-image: url(/images/pipettes.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				background-position: 0 -30em;
+				overflow: hidden;
+			}
+
+			#main.blog-page > .main > .image.main:first-child {
+				margin: -5em 0 5em -5em;
+				width: calc(100% + 10em);
+				height: 8em;
+				border-top-right-radius: 0.25em;
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-image: url(/images/library.jpg);
+				background-size: 100%;
+				background-attachment: fixed;
+				overflow: hidden;
 			}
 
 				#main > .main > .image.main:first-child img {
@@ -3737,7 +3910,7 @@ input, select, textarea {
 		transition: background-color 0.25s ease;
 	}
 		.carousel-card:hover {
-			background-color: #f7f7f7f7;
+			background-color: #f1f1f1;
 		}
 
 	.card-image img {
@@ -3890,3 +4063,46 @@ input, select, textarea {
 .icon.major:before, #main .icon.major:before {
 	border: none;
 } */
+
+/* Curtains */
+
+.page-curtain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	pointer-events: none;
+	display: flex;
+}
+
+.curtain-panel {
+	width: 50vw;
+	height: 100vh;
+	background-color: #1B1726;
+	transition: transform 1s cubic-bezier(0.5, 0.0, 0.0, 1.0);
+	will-change: transform;
+}
+
+/* Initial state: Curtains CLOSED (covering the screen) */
+.curtain-left {
+  	transform: translateX(0);
+}
+.curtain-right {
+ 	transform: translateX(0);
+}
+
+/* Open state: Panels slide out off-screen */
+body.page-loaded .curtain-left {
+  	transform: translateX(-100%);
+}
+body.page-loaded .curtain-right {
+  	transform: translateX(100%);
+}
+
+/* Closing state: Panels slide back together */
+body.page-exiting .curtain-left,
+body.page-exiting .curtain-right {
+  	transform: translateX(0) !important;
+}
