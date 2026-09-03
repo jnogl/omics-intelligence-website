@@ -1,32 +1,29 @@
-const smallScreenQuery = window.matchMedia('max-width: 480px');
-const mediumScreenQuery = window.matchMedia('max-width: 980px');
+const smallScreenQuery = window.matchMedia('(max-width: 480px)');
+const mediumScreenQuery = window.matchMedia('(max-width: 1024px)');
 
 function handleScreenChange() {
-    console.log(smallScreenQuery)
-    console.log(mediumScreenQuery)
-    const blogArticleCard = document.querySelectorAll('.blog-article-card');
+    const blogArticleCards = document.querySelectorAll('.blog-article-card');
 
-    blogArticleCard.forEach(card => {
+    blogArticleCards.forEach(card => {
         if (smallScreenQuery.matches) {
-            card.classList.remove("col-6");
-            card.classList.remove("col-4");
+            // Screen <= 480px
+            card.classList.remove("col-6", "col-4");
             card.classList.add("col-12");
-            
         } else if (mediumScreenQuery.matches) {
-            card.classList.remove("col-12");
-            card.classList.remove("col-4");
-            card.classList.add("col-6")
-
+            // Screen > 480px and <= 1024px
+            card.classList.remove("col-12", "col-4");
+            card.classList.add("col-6");
         } else {
-            card.classList.remove("col-12");
-            card.classList.remove("col-6");
-            card.classList.add('col-4')
+            // Screen > 1024px
+            card.classList.remove("col-12", "col-6");
+            card.classList.add("col-4");
         }
-    })
+    });
 }
 
-smallScreenQuery.addEventListener("change", handleScreenChange)
-mediumScreenQuery.addEventListener("change", handleScreenChange)
+// Attach event listeners
+smallScreenQuery.addEventListener("change", handleScreenChange);
+mediumScreenQuery.addEventListener("change", handleScreenChange);
 
-// Needed for initial assessment of screen size
+// Initial check on page load
 document.addEventListener('DOMContentLoaded', handleScreenChange);
