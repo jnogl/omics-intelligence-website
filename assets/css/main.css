@@ -3735,6 +3735,7 @@ input, select, textarea {
 				border-bottom-left-radius: 0;
 				background-image: url(/images/pen.jpg);
 				background-size: 100%;
+				background-position: center top;
 				background-attachment: fixed;
 				overflow: hidden;
 			}
@@ -3916,6 +3917,9 @@ input, select, textarea {
 					margin: -3em -1.5em 3em -1.5em;
 					width: calc(100% + 3em);
 					height: 25vw;
+					background-size: 150%;
+					background-position: center top;
+
 				}
 
 				#main.subscription-page > .main > .image.main:first-child {
@@ -3946,6 +3950,8 @@ input, select, textarea {
 						margin: -2.5em -1em 0.5em -1em;
 						width: calc(100% + 2em);
 						height: 25vw;
+						background-size: 100%;
+						background-position: center top;
 					}
 
 					#main.contact-page > .main > .image.main:first-child {
