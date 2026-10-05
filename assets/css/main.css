@@ -3726,37 +3726,39 @@ input, select, textarea {
 			}
 
 			#main.contact-page > .main > .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -5em -5em 3em -5em;
 				width: calc(100% + 10em);
-				height: 8em;
+				height: 10vw;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 				background-image: url(/images/pen.jpg);
 				background-size: 100%;
+				background-position: center top;
 				background-attachment: fixed;
 				overflow: hidden;
 			}
 
 			#main.subscription-page > .main > .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -5em -5em 3em -5em;
 				width: calc(100% + 10em);
-				height: 8em;
+				height: 10vw;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 				background-image: url(/images/library.jpg);
 				background-size: 100%;
+				background-position: center top;
 				background-attachment: fixed;
 				overflow: hidden;
 			}
 
 			#main.about-page > .main > .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -5em -5em 3em -5em;
 				width: calc(100% + 10em);
-				height: 24em;
+				height: 10vw;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
@@ -3769,9 +3771,9 @@ input, select, textarea {
 
 
 			#main.services-page > .main > .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -5em -5em 3em -5em;
 				width: calc(100% + 10em);
-				height: 8em;
+				height: 10vw;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
@@ -3784,15 +3786,16 @@ input, select, textarea {
 			}
 
 			#main.blog-page > .main > .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -5em -5em 3em -5em;
 				width: calc(100% + 10em);
-				height: 8em;
+				height: 10vw;
 				border-top-right-radius: 0.25em;
 				border-top-left-radius: 0.25em;
 				border-bottom-right-radius: 0;
 				border-bottom-left-radius: 0;
 				background-image: url(/images/library.jpg);
 				background-size: 100%;
+				background-position: center top;
 				background-attachment: fixed;
 				overflow: hidden;
 			}
@@ -3811,8 +3814,27 @@ input, select, textarea {
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -4em 0 4em -4em;
+					margin: -4em -4em 2em -4em;
 					width: calc(100% + 8em);
+					height: 10vw;
+				}
+
+				#main.contact-page > .main > .image.main:first-child {
+					margin: -4em -4em 2em -4em;
+					width: calc(100% + 8em);
+					height: 10vw;
+				}
+
+				#main.subscription-page > .main > .image.main:first-child {
+					margin: -4em -4em 2em -4em;
+					width: calc(100% + 8em);
+					height: 10vw;
+				}
+
+				#main.blog-page > .main > .image.main:first-child {
+					margin: -4em -4em 2em -4em;
+					width: calc(100% + 8em);
+					height: 10vw;
 				}
 
 		}
@@ -3824,8 +3846,27 @@ input, select, textarea {
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -4em 0 4em -3em;
+					margin: -4em -3em 2em -3em;
 					width: calc(100% + 6em);
+					height: 15vw;
+				}
+
+				#main.contact-page > .main > .image.main:first-child {
+					margin: -4em -3em 2em -3em;
+					width: calc(100% + 6em);
+					height: 15vw;
+				}
+
+				#main.subscription-page > .main > .image.main:first-child {
+					margin: -4em -3em 2em -3em;
+					width: calc(100% + 6em);
+					height: 15vw;
+				}
+
+				#main.blog-page > .main > .image.main:first-child {
+					margin: -4em -3em 2em -3em;
+					width: calc(100% + 6em);
+					height: 15vw;
 				}
 
 		}
@@ -3837,8 +3878,27 @@ input, select, textarea {
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -3em 0 2em -2em;
+					margin: -3em -2em 1em -2em;
 					width: calc(100% + 4em);
+					height: 15vw;
+				}
+
+				#main.contact-page > .main > .image.main:first-child {
+					margin: -3em -2em 1em -2em;
+					width: calc(100% + 4em);
+					height: 15vw;
+				}
+
+				#main.subscription-page > .main > .image.main:first-child {
+					margin: -3em -2em 1em -2em;
+					width: calc(100% + 4em);
+					height: 15vw;
+				}
+
+				#main.blog-page > .main > .image.main:first-child {
+					margin: -3em -2em 1em -2em;
+					width: calc(100% + 4em);
+					height: 15vw;
 				}
 
 		}
@@ -3850,8 +3910,31 @@ input, select, textarea {
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -3em 0 1.5em -1.5em;
+					margin: -3em -1.5em 3em -1.5em;
 					width: calc(100% + 3em);
+					height: 25vw;
+				}
+
+				#main.contact-page > .main > .image.main:first-child {
+					margin: -3em -1.5em 3em -1.5em;
+					width: calc(100% + 3em);
+					height: 25vw;
+					background-size: 150%;
+
+				}
+
+				#main.subscription-page > .main > .image.main:first-child {
+					margin: -3em -1.5em 3em -1.5em;
+					width: calc(100% + 3em);
+					height: 25vw;
+					background-size: 150%;
+				}
+
+				#main.blog-page > .main > .image.main:first-child {
+					margin: -3em -1.5em 3em -1.5em;
+					width: calc(100% + 3em);
+					height: 25vw;
+					background-size: 150%;
 				}
 
 		}
@@ -3867,9 +3950,31 @@ input, select, textarea {
 				}
 
 					#main > .main > .image.main:first-child {
-						margin: -2.5em 0 1.5em -1em;
+						margin: -2.5em -1em 0.5em -1em;
 						width: calc(100% + 2em);
-						border-radius: 0;
+						height: 25vw;
+						background-size: 100%;
+					}
+
+					#main.contact-page > .main > .image.main:first-child {
+						margin: -2.5em -1em 0.5em -1em;
+						width: calc(100% + 2em);
+						height: 25vw;
+						background-size: 150%;
+					}
+
+					#main.subscription-page > .main > .image.main:first-child {
+						margin: -2.5em -1em 0.5em -1em;
+						width: calc(100% + 2em);
+						height: 25vw;
+						background-size: 150%;
+					}
+
+					#main.blog-page > .main > .image.main:first-child {
+						margin: -2.5em -1em 0.5em -1em;
+						width: calc(100% + 2em);
+						height: 25vw;
+						background-size: 150%;
 					}
 
 						#main > .main > .image.main:first-child img {
@@ -3931,6 +4036,7 @@ input, select, textarea {
 		justify-content: center;
 		gap: 8px;
 		margin-top: 15px;
+		margin-bottom: 10px;
 	}
 
 	.dot {
